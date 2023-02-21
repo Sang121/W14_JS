@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        console.log("Part #1: Làm việc với string");
+        let str1='my name is';
+        let name='Sang';
+        let str2=`${str1} ${name}`;
+       
+       console.log(str2);
+
+console.log("Part #2: Destructuring objects")
+        let infomation={
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'john@gmail.com',
+        }
+        let {firstName,lastName,email}=infomation;
+        console.log(firstName)
+        console.log(infomation )
+
+console.log("Part #3: Destructuring objects")
+        let [secondName]=['Johân', 'Doe']
+        console.log(secondName);
+
+console.log("Part #4: Object Literal")
+        let firstName2 = 'Dylan';  
+        let information = { firstName2};
+        console.log(information)
+
+
+        console.log("Part #5: Vòng lặp for… of")
+        let str3="hello"
+        for(let char of str3) {console.log(char)};
+        console.log("Part #6: Spread syntax");
+        let arr1=[1,2,3]
+        let arr2=[4,5,6]
+        let arr3=[... arr1, ...arr2]
+        console.log(arr3);
+        function findLength(...args) {  console.log(args.length);}
+
+        findLength(); 
+        findLength(1,2,2,2, );
+        findLength(2, 3, 4);
+        console.log("Part #7 Arrow function")
+        const num= (a,b)=> a+b;
+        console.log(num(2 ,3))
+
+        console.log("Part #8 includes()")
+        let str="hello"
+        console.log(str.includes("hel"));
+        console.log(str.includes("helloq"))
+        
+        console.log("Part #9 CLasse")
+        class Animals{
+            constructor (name,age){
+                this.name=name;
+                this.age=age;
+        }
+        suaInfo (name,age){
+            console.log(`Tên: ${this.name} tuổi:${this.age}`);
+        }}
+    
+        const meo=new Animals("Tom",12);
+        meo.suaInfo();
+        console.log(" Part #9: Promise, async và await");
+        function takeLongTimeAsync(){
+            return new Promise(resolve=>{
+                setTimeout(()=> resolve("Long time  "),4000);
+
+            });
+
+        }
+        async function test(){
+            const v =await takeLongTimeAsync();
+            console.log(v)  
+
+        }
+        test();
+
+
+
+
+    </script>
+</body>
+</html>
